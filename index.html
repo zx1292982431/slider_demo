@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>my-project</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  </head>
+  <body>
+
+    <div id="slider">
+      <transition name="el-fade-in-linear" >
+        <center><div
+                style="border: black;width: 98%;height:300px;"
+                v-on="loading"
+                v-loading="loading"
+                @change="change()"
+        >{{value}}</div></center>
+      </transition>
+      <center><div style="width: 94%" >
+      <el-slider
+              v-model="value"
+              :format-tooltip="formatTooltip"
+              :min= 1964
+              :max= 2021
+              @change="change()"
+
+
+      ></el-slider>
+    </div></center>
+
+    </div>
+    <!-- built files will be auto injected -->
+    <script src="main.js"></script>
+  </body>
+</html>
